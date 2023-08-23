@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letsupgrade jsassignment2</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            background-color: #252525;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        #box{
+            height: 400px;
+            width: 400px;
+            background-color: whitesmoke;
+            border-radius: 15px 15px;
+            display: none;
+        }
+        #close{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            border: none;
+        }
+        #show{
+            height: 50px;
+            width: 100px;
+            border-radius: 15px;
+            background-color: blueviolet;
+        }
+    </style>
+    <div id="main">
+        <div id="box">
+            <button id="close">X</button><br>
+            <h1>Hello Dosto</h1>
+        </div>
+        <button id ="show">Show Box</button>
+    </div>
+    <script>
+        document.getElementById("show").addEventListener('click',showPopup);
+        function showPopup(){
+            document.getElementById('box').style.display="block";
+        }
+        document.getElementById("close").addEventListener('click',closepopup);
+        function closepopup(){
+            document.getElementById('box').style.display="none";
+        }
+    </script>
+</body>
+</html>
